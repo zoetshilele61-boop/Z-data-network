@@ -1,0 +1,1 @@
+web: gunicorn z_data:app
