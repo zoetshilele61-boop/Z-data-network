@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Data Network - Statistiques</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background: #0f0c29; color: white; text-align: center; margin: 0; padding: 20px; }
+        h1 { color: #4ade80; }
+        .box { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; max-width: 500px; margin: 20px auto; }
+        .box h2 { color: #fbbf24; }
+        .stat { font-size: 30px; font-weight: bold; color: #4ade80; }
+    </style>
+</head>
+<body>
+    <h1>📡 Z-Data Network - Statistiques</h1>
+    <div class="box">
+        <h2>Meilleure connexion</h2>
+        <p class="stat">{{ best['download'] }} Mbps</p>
+        <p>Opérateur : {{ best['operator'] }}</p>
+        <p>Date : {{ best['timestamp'] }}</p>
+    </div>
+    <div class="box">
+        <h2>Mauvaise connexion</h2>
+        <p class="stat">{{ worst['download'] }} Mbps</p>
+        <p>Opérateur : {{ worst['operator'] }}</p>
+        <p>Date : {{ worst['timestamp'] }}</p>
+    </div>
+    <div class="box">
+        <h2>Moyenne globale</h2>
+        <p class="stat">{{ avg }} Mbps</p>
+    </div>
+    <a href="/" style="color: #4ade80;">Retour</a>
+</body>
+</html>
